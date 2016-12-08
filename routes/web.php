@@ -12,5 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main.index');
 });
+
+Route::group(['prefix' => 'admin', 'middleware' => ['admin']], function(){
+	Route::resource('career', 'CareerController');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
