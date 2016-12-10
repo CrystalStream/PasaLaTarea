@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin', 'middleware' => ['admin']], function(){
 	Route::resource('career', 'CareerController');
+	Route::resource('semester', 'SemesterController');
+	Route::resource('subject','SubjectController');
 });
 Auth::routes();
 

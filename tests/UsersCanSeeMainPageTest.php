@@ -8,7 +8,7 @@ class UsersCanSeeMainPageTest extends TestCase
 {
     use DatabaseMigrations;
     /**
-     * A basic test example.
+     * Test to check if everything is okay
      * @test
      * @return void
      */
@@ -31,7 +31,7 @@ class UsersCanSeeMainPageTest extends TestCase
              ->see($user->name);
     }
     /**
-     * A basic test example.
+     * Test to check if the middleware is working
      * @test
      * @return void
      */
@@ -40,6 +40,23 @@ class UsersCanSeeMainPageTest extends TestCase
 
         $this->actingAs($user)
              ->visit('/admin/career')
+             ->seePageIs('/');
+    }
+
+    /**
+     * Test that check the bounds of the user upon his role
+     * @test
+     * @return void
+     */
+    public function AdminCanNavigateThroughAll(){
+        $user = factory(App\User::class)->create(['role' => 'Administrador']);
+
+        $this->actingAs($user)
+             ->visit('/admin/career/create')
+             ->see('Agregar Carrera')
+             ->seePageIs('/admin/career/create')
+             ->visit('/')
+             ->see($user->name)
              ->seePageIs('/');
     }
 }

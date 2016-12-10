@@ -8,7 +8,7 @@ class UserCanAddCareersTest extends TestCase
 {
 	use DatabaseMigrations;
     /**
-     * A basic test example.
+     * Test that add a new career.
      *@test
      * @return void
      */
