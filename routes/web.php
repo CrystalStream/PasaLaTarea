@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('main.index');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => ['admin']], function(){
+Route::group(['prefix' => 'admin', 'middleware' => ['admin','guest','auth']], function(){
 	Route::resource('career', 'CareerController');
 	Route::resource('semester', 'SemesterController');
 	Route::resource('subject','SubjectController');

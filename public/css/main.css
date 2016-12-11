@@ -1,0 +1,149 @@
+footer{
+	background: #9A9A9A;
+	color: white;
+	margin-top: 20px;
+}
+body{
+	background-color: #F3F7F6;
+}
+.flex-center-all{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.social li{
+	display: inline-block;
+	font-size: 30px;
+	margin-right: 10px;
+}
+.social li a{
+	color: white;
+	transition: .3s
+}
+.social li a:hover{
+	color: #464646;
+}
+.white-text{
+	color:white;
+}
+.above-100{
+	z-index: 100;
+}
+.init-p{
+	font-size:25px;
+	letter-spacing: 1px;
+	color:white;
+	align-self: center;
+}
+.flex-right{
+	align-self: flex-end;
+}
+.styless{
+	list-style: none;
+}
+.has-margin-top{
+	margin-top: 20px;
+}
+.has-left-top-borde{
+	margin-top: 10px;
+	padding-top: 20px;
+	border-left: 1px solid #E3E3E3;
+}.
+.has-margin-bot{
+	margin-bottom: 20px;
+}
+.has-no-margin-bot{
+	margin-bottom: 0;
+}
+.note-text{
+	color:#6C6C6C;
+}
+.icon-btn{
+	display: inline-block;
+	margin-right: 10px;
+	float:left;
+}
+.flex-vertical{
+	display: flex;
+	flex-direction:column;
+	align-content: space-around;
+}
+.has-backgroung-img{
+	  position: relative;
+    overflow: hidden;
+    background-color: black;
+    height: 60vh;
+}
+.has-backgroung-img h1{
+    position: relative;
+    z-index: 20;
+}
+.back-img{
+	min-width: 100%;
+	min-height: 100%;
+	position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  opacity: 0.5;
+}
+.header-section{
+	border-bottom: 1px dotted black;
+}
+.flex-strech-all{
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+	flex-wrap:wrap;
+}
+.how-it-work{
+	border: 1px solid #6C6C6C;
+	border-radius: 5px;
+	padding: 15px;
+	background-color: white;
+	box-shadow: 1px 1px 1px black;
+	margin-top:15px;
+}
+.icon-work{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #8FC5CE
+}
+.green{
+	color:#4CB263;
+}
+.purple{
+	color:#917196;
+}
+.red{
+	color:#FF565E;
+}
+.list-work{
+	text-align: left;
+	padding-left: 0;
+}
+.list-work li{
+	padding-top: 10px;
+}
+.white-back{
+	background-color:white;
+}
+.has-padding-bot{
+	padding-bottom: 20px;
+}
+.our-users{
+	border: 1px solid #8FC5CE;
+	padding: 5px;
+	border-radius: 5px;
+}
+.blockquote{
+	font-style: italic;
+	font-size: 16px;
+	letter-spacing: .5px;
+}
+@media (max-width: 990px){
+	.has-left-top-borde{
+		border-left: none;
+		border-top: 1px solid #E3E3E3;
+	}
+}
