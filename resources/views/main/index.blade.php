@@ -11,7 +11,7 @@
 		<p class="init-p">Unete a esta gran red de estudiantes y pasa todas tus materias con excelencia!</p>
 	</div>
 </div>
-<div class="container text-center">
+<div class="container text-center reveal">
 	<div class="row">
 		<div class="col-xs-12 header-section">
 			<h2>¿Como funciona?</h2>
@@ -72,7 +72,7 @@
 	</div>
 </div>
 
-<div class="container-fluid has-margin-top white-back text-center has-padding-bot">
+<div class="container-fluid has-margin-top white-back text-center has-padding-bot reveal">
 	<div class="container">
 			<div class="row">
 		<div class="col-xs-12 header-section">
@@ -98,15 +98,15 @@
 				<p>Registrate, sube tus tareas y puedes recibir donaciones, aparte de bonos si tus trabajos son 
 				los que tienen mas rate durante el mes
 				<br>
-				Lo unico que tienes que hacer es lo que ya estas haciendo! Ayuda a los demas y a los profesores subiendo tus tareas</p>
-				<button class="btn btn-success btn-block">Registrarme y empezar a subir</button>
+				Lo unico que tienes que hacer es lo que ya estas haciendo! Ayuda a los demas subiendo tus tareas</p>
+				<a href="{{ url('/register') }}" class="btn btn-success btn-block">Registrarme y empezar a subir</a>
 			</div>
 		</div>
 	</div>
 	</div>
 </div>
 
-<div class="container text-center">
+<div class="container text-center reveal">
 	<div class="row">
 		<div class="col-xs-12 header-section">
 			<h2>Nuestros Usuarios</h2>

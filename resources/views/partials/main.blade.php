@@ -88,14 +88,14 @@
 	      		</div>
       			<div class="col-xs-12 col-md-6 has-left-top-borde">
       				<h3>Ya tienes una cuenta? Ingresa con tu email y contrasena</h3>
-							<form action="" class="has-margin-top">
+      				{!!Form::open(array('url' => '/login', 'method' => 'POST', 'class' => 'has-margin-top'))!!}
 								<div class="form-group">
 								<label> Email: </label>
 									<div class="input-group">
 										<div class="input-group-addon">
 											<i class="fa fa-user"></i>
 										</div>
-										<input type="text" class="form-control" placeholder="Email">
+										{!!Form::text('email',null,array('class' => 'form-control', 'placeholder' => 'Email'))!!}
 									</div>
 								</div>
 								<div class="form-group">
@@ -104,13 +104,13 @@
 										<div class="input-group-addon">
 											<i class="fa fa-lock"></i>
 										</div>
-										<input type="text" class="form-control" placeholder="Contrasena">
+										{!!Form::password('email',array('class' => 'form-control', 'placeholder' => 'Password'))!!}
 									</div>
 								</div>
 								<div class="form-group">
-									<input type="submit" class="btn btn-success btn-block" value="Entrar">
+									{!!Form::submit('Entrar', array('class' => 'btn btn-success btn-block'))!!}
 								</div>
-							</form>
+							{!!Form::close()!!}
       			</div>
       		</div>
 	      </div>
@@ -120,5 +120,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+	<script src="{{ asset('/js/app.js') }}"></script>
 </body>
 </html>
