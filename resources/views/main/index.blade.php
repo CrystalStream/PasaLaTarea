@@ -31,7 +31,11 @@
 						<li>Por Semestre</li>
 						<li>Por Carrera</li>
 						<li>
-							<button class="btn btn-primary btn-block">Empezar a Buscar</button>
+							<a href=" {{ url('/login') }} ">
+								<button class="btn btn-primary btn-block">
+								Empezar a Buscar
+								</button>
+							</a>
 						</li>
 					</ul>
 				</div>

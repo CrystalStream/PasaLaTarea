@@ -21,5 +21,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['admin','guest','auth']], fu
 	Route::resource('subject','SubjectController');
 });
 Auth::routes();
+Route::get('/logout' , 'Auth\LoginController@logout');
 
+
+Route::get('/final_reset' , 'Auth\ResetPasswordController@reset_success');
 Route::get('/home', 'HomeController@index');

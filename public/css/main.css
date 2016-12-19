@@ -2,6 +2,10 @@ footer{
 	background: #9A9A9A;
 	color: white;
 	margin-top: 20px;
+	position: relative;
+	bottom:0;
+	left:0;
+	right:0;
 }
 body{
 	background-color: #F3F7F6;
@@ -27,10 +31,11 @@ body{
 	color:white;
 }
 .above-100{
+	font-family: 'Londrina Shadow', cursive;
 	z-index: 100;
 }
 .init-p{
-	font-size:25px;
+	font-size:35px;
 	letter-spacing: 1px;
 	color:white;
 	align-self: center;
@@ -140,6 +145,17 @@ body{
 	font-style: italic;
 	font-size: 16px;
 	letter-spacing: .5px;
+}
+.has-border-bottom{
+	border-bottom: 1px dotted black;
+	line-height: 0.1em;
+}
+.has-border-bottom span{
+	background: #fafafa;
+	padding: 0 10px;
+}
+.succes-reset{
+	font-size:30px;
 }
 @media (max-width: 990px){
 	.has-left-top-borde{
