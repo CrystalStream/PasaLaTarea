@@ -4,6 +4,12 @@
   <div class="container-fluid white-back">
     <div class="container has-margin-top">
         <div class="jumbotron col-xs-12 reveal">
+          @if(Session::has('login_error'))
+            <div class="alert alert-danger alert-dismissible second_reveal" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <strong>Error!</strong> {{ Session::get('login_error') }}
+            </div>
+          @endif
           <div class="col-xs-12">
             <fieldset>
               <legend>Inicia Sesion</legend>
@@ -20,7 +26,7 @@
                     </button>
                 </div>
                 <div class="has-border-bottom has-margin-bot"><span>O</span></div>
-                <p class="has-margin-top"> Si tienes una cuenta con nosotros ingresa tu email y tu contrasena</p>
+                <p class="has-margin-top"> Si tienes una cuenta con nosotros ingresa tu email y tu contraseña</p>
             </div>
             {!! Form::open(array('url' => '/login', 'method' => 'POST')) !!}
               <div class="col-xs-12 col-md-6 col-md-offset-3 has-margin-top">
@@ -28,7 +34,7 @@
                   <label>Correo Electronico:</label>
                   <div class="input-group">
                     <div class="input-group-addon">
-                      <i class="fa fa-user"></i>
+                      <i class="fa fa-envelope"></i>
                     </div>
                     {!! Form::email('email', null, array('class' => 'form-control')) !!}
                   </div>
@@ -39,12 +45,12 @@
                   <label>Password:</label>
                   <div class="input-group">
                     <div class="input-group-addon">
-                      <i class="fa fa-envelope"></i>
+                      <i class="fa fa-lock"></i>
                     </div>
                     {!! Form::password('password', array('class' => 'form-control')) !!}
                   </div>
                     <a class="btn btn-link" href="{{ url('/password/reset') }}">
-                       Olvidaste tu contrasena?
+                       Olvidaste tu contraseña?
                     </a>
                 </div>
               </div>

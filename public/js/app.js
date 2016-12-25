@@ -6,7 +6,7 @@ $(document).ready(function(){
 	sr.reveal('.our-users', { duration: 1000 , easing: 'ease-in-out', origin: 'right' },200);
 	sr.reveal('.above-100', { duration: 1000 , easing: 'ease-in-out', origin: 'top' },200);
 
-	$('[data-toggle="tooltip"]').tooltip(); 
+	$('[data-toggle="tooltip"]').tooltip();
 
 
 	(function validateRegister(){
@@ -30,7 +30,11 @@ $(document).ready(function(){
 			}
 		})
 		$('#twice-pass-user').on('keyup', function(evt){
-			if($(this).val() != $('#password-user').val()){
+			console.log($(this).val() != $('#password-user').val());
+			console.log($.trim($('#password-user').val()) == '');
+			console.log($('#password-user').val().length < 8);
+			console.log(!hasNumbers($('#password-user').val()));
+			if( ( $(this).val() != $('#password-user').val() ||  $.trim($('#password-user').val()) == '' ) || $('#password-user').val().length < 8 || !hasNumbers($('#password-user').val()) ){
 				$('#submit-btn').attr('disabled','disabled');
 				$('.error-no-match').removeClass('hidden');
 			}else{
@@ -44,6 +48,8 @@ $(document).ready(function(){
 	{
 		var regex = /\d/g;
 		return regex.test(t);
-	}  
+	}
+
+
 
 });

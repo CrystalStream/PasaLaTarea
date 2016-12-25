@@ -1,14 +1,12 @@
+body{
+	background-color: #F3F7F6;
+	height: 100%;
+}
 footer{
 	background: #9A9A9A;
 	color: white;
 	margin-top: 20px;
 	position: relative;
-	bottom:0;
-	left:0;
-	right:0;
-}
-body{
-	background-color: #F3F7F6;
 }
 .flex-center-all{
 	display: flex;
@@ -157,9 +155,34 @@ body{
 .succes-reset{
 	font-size:30px;
 }
+.wrapper{
+	min-height: 100%;
+}
+.large-p{
+	padding: 15vh 0;
+}
+.large-p-2{
+	padding: 20vh 0;
+}
 @media (max-width: 990px){
 	.has-left-top-borde{
 		border-left: none;
 		border-top: 1px solid #E3E3E3;
+	}
+}
+@media (max-width: 300px) {
+	.succes-reset{
+		font-size: 15px;
+	}
+	.large-p-2{
+		padding: 25vh 0;
+	}
+}
+@media (max-width: 600px) {
+	.succes-reset{
+		font-size: 18px;
+	}
+	.large-p-2{
+		padding: 20vh 0;
 	}
 }
