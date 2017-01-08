@@ -33,28 +33,31 @@
               </div>
               <div class="col-xs-12">
                 <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }} second_reveal">
-                  <label>Tu contrasena*:</label>
+                  <label>Tu contraseña*:</label>
                   <div class="input-group">
                     <div class="input-group-addon">
                       <i class="fa fa-lock"></i>
                     </div>
                     {!! Form::password('password', array('class' => 'form-control','id' => 'password-user','placeholder' => 'Tu contrasena', 'data-toggle' => 'tooltip', 'data-placement' => 'right', 'title' => 'Si tiene mas de 8 caracteres y minimo 1 numero, estariamos mas que contentos')) !!}
                   </div>
-                  <small class="red hidden" id="no-lenght"> *La contrasena es muy corta, por favor elige otra <br></small>
-                  <small class="red hidden" id="no-number"> *La contrasena no contiene al menos un numero, porfavor elige otra <br></small>
-                  <small class="red error-no-match hidden"> *Las contrasenas no coinciden porfavor intenta de nuevo <br></small>
+                  @foreach($errors->get('password') as $pass_error )
+                    <small>{{ $pass_error }} </small>
+                  @endforeach
+                  <small class="red hidden" id="no-lenght"> *La contraseña es muy corta, por favor elige otra <br></small>
+                  <small class="red hidden" id="no-number"> *La contraseña no contiene al menos un numero, porfavor elige otra <br></small>
+                  <small class="red error-no-match hidden"> *Las contraseñas no coinciden porfavor intenta de nuevo <br></small>
                 </div>
               </div>
               <div class="col-xs-12">
                 <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }} second_reveal">
-                  <label>Repite la contrasena*:</label>
+                  <label>Repite la contraseña*:</label>
                   <div class="input-group">
                     <div class="input-group-addon">
                       <i class="fa fa-lock"></i>
                     </div>
-                    {!! Form::password('password', array('class' => 'form-control','id' => 'twice-pass-user', 'placeholder' => 'Otra vez tu contrasena')) !!}
+                    {!! Form::password('password_confirmation', array('class' => 'form-control','id' => 'twice-pass-user', 'placeholder' => 'Otra vez tu contrasena')) !!}
                   </div>
-                  <small class="red error-no-match hidden"> *Las contrasenas no coinciden porfavor intenta de nuevo</small>
+                  <small class="red error-no-match hidden"> *Las contraseñas no coinciden porfavor intenta de nuevo</small>
                 </div>
               </div>
               <div class="col-xs-12 has-margin-top">

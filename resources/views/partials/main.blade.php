@@ -45,10 +45,11 @@
 		  </div>
 		</nav>
 		
-		@yield('content')
-		
+		<div class="all-height">
+			@yield('content')
+		</div>
 
-		<footer>
+		<footer class="col-xs-12">
 			<div class="container-fluid">
 				<div class="flex-center-all">
 					<p>Pasa La Tarea &copy;</p>
