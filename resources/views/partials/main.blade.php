@@ -7,13 +7,14 @@
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/main.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/drag.min.css') }}">
 	<link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}" />
 	<link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet"> 
 
 </head>
 <body>
 	<div class="wrapper">
-		<nav class="navbar navbar-inverse has-no-margin-bot">
+		<nav class="navbar navbar-inverse has-no-margin-bot app-navbar">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -45,7 +46,7 @@
 		  </div>
 		</nav>
 		
-		<div class="all-height">
+		<div class="all-height" style="padding-top: 3.6em;">
 			@yield('content')
 		</div>
 
@@ -125,5 +126,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 	<script src="{{ asset('/js/app.js') }}"></script>
+	<script src="{{ asset('/js/drag.min.js') }}"></script>
 </body>
 </html>

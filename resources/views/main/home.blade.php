@@ -25,9 +25,57 @@
 			<div class="panel-footer text-left">
 				<small>*Si no vez la carrera en la que estas es probable que nadie haya subido ni una tarea. Puedes <a href="#">contactarnos</a> para dar de alta una carrera nueva.</small>
 			</div>
-
 		</div>
+	</div>
 
+	<div class="col-xs-12 has-border-bottom">
+		<div class="jumbotron">
+			{!! Form::open(array()) !!}
+				<fieldset>
+					<legend class="text-center has-margin-bot"><small style="background: #fafafa; padding: 0 5px;">Sube tu tarea</small></legend>
+					<div class="col-xs-12 col-md-6">
+						<div class="form-group">
+							{!! Form::file('attachment', ['id'=>'attach', 'multiple']) !!}
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<div class="form-group">
+							<label>Carrera:</label>
+							{!! Form::select('career', ['H'=>'Uno','E'=>'Dos'], null, array('class' => 'form-control')) !!}
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<div class="form-group">
+							<label>Materia:</label>
+							{!! Form::select('subject', ['H'=>'Uno','E'=>'Dos'], null, array('class' => 'form-control')) !!}
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<div class="form-group">
+							<label>Semestre:</label>
+							{!! Form::select('semester', ['H'=>'Uno','E'=>'Dos'], null, array('class' => 'form-control')) !!}
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<div class="form-group">
+							<label>Nombre:</label>
+							{!! Form::text('name', null, array('class' => 'form-control')) !!}
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="form-group">
+							<label>Descripcion <i id="missingChar">(100)</i>:</label>
+							{!! Form::textarea('description', null, array('class' => 'form-control', 'cols' => '10', 'rows' => '10', 'style' => 'resize:none;', 'id'=>'desc-area', 'maxlength' => '100')) !!}
+						</div>
+					</div>
+					<div class="col-xs-12 text-center has-margin-top">
+						<div class="form-group">
+							{!! Form::submit('Subir Tarea', array('class' => 'btn btn-info')) !!}
+						</div>
+					</div>
+				</fieldset>
+			{!! Form::close() !!}
+		</div>
 	</div>
 	
 @endsection

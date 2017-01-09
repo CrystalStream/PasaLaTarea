@@ -173,6 +173,14 @@ footer{
 .body-text{
 	font-size: 17px;
 }
+.drag-file{
+	border-right: 1px solid black;
+}
+.app-navbar{
+	position: fixed;
+	width:100%;
+	z-index: 99999;
+}
 
 /* SIDE BAR */
 .main .row{
@@ -236,12 +244,11 @@ nav.sidebar, .main{
 	}
 	nav.sidebar{
 		width: 200px;
-		height: 100%;
+		min-height: 100vh;
 		margin-left: -160px;
 		float: left;
 		z-index: 8000;
 		margin-bottom: 0px;
-		min-height: 100vh;
 		position: fixed;
 	}
 	nav.sidebar li {

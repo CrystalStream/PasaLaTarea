@@ -7,7 +7,40 @@ $(document).ready(function(){
 	sr.reveal('.above-100', { duration: 1000 , easing: 'ease-in-out', origin: 'top' },200);
 
 	$('[data-toggle="tooltip"]').tooltip();
+	$('#attach').ezdz({
+		className:     'drag-file',
+    text:          'Sube un archivo',
+    previewImage:  true,
+    value:         null,
+    classes: {
+        main:      'ezdz-dropzone',
+        enter:     'ezdz-enter',
+        reject:    'ezdz-reject',
+        accept:    'ezdz-accept',
+        focus:     'ezdz-focus'
+    },
+    validators: {
+        maxSize:   50000,
+        width:     null,
+        maxWidth:  null,
+        minWidth:  null,
+        height:    null,
+        maxHeight: null,
+        minHeight: null
+    },
+    init:   function() {},
+    enter:  function() {},
+    leave:  function() {},
+    reject: function() {},
+    accept: function() {},
+    format: function(filename) {
+        return filename;
+    }
+	});
 
+	$('#desc-area').on('keyup',function(evt){
+		$('#missingChar').text('(' + (100 - $(this).val().length) + ')');
+	});
 	//SIDE BAR JS
 	htmlbodyHeightUpdate()
 	$( window ).resize(function() {
