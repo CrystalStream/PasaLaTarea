@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main.index');
-});
+Route::get('/', 'MainController@index')->middleware('guest');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['admin','guest','auth']], function(){
 	Route::resource('career', 'CareerController');
@@ -22,7 +20,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['admin','guest','auth']], fu
 });
 Auth::routes();
 Route::get('/logout' , 'Auth\LoginController@logout');
-
-
 Route::get('/final_reset' , 'Auth\ResetPasswordController@reset_success');
-Route::get('/home', 'HomeController@index');
+
+Route::get('/home', 'HomeController@home');
+Route::get('/search' , 'HomeController@search')->name('search');
+

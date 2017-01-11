@@ -1,11 +1,11 @@
 @extends('home')
 @section('main-content')
 	<div class="col-xs-12">
-		{!! Form::open() !!}
+		{!! Form::open(array('route'=>'search', 'method'=>'GET')) !!}
 		<div class="col-xs-12">
 			<div class="input-group">
 				<div class="input-group-addon"> <i class="fa fa-search fa-fw"></i></div>
-				{!! Form::text('searchterm', null, array('class'=>'form-control', 'placeholder'=>'Busca por materia o por carrera' )) !!}
+				{!! Form::text('q', null, array('class'=>'form-control', 'placeholder'=>'Busca por materia o por carrera' )) !!}
 			</div>
 		</div>
 		{!! Form::close() !!}

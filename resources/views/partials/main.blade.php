@@ -23,7 +23,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="/"><img src="{{ asset('img/brand.png')}}" alt="Brand" class="img-responsive" width="120"></a>
+		      <a class="navbar-brand" href="{{ Auth::check() ? '/home' : '/'}}"><img src="{{ asset('img/brand.png')}}" alt="Brand" class="img-responsive" width="120"></a>
 		    </div>
 
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

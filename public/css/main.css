@@ -150,6 +150,9 @@ footer{
 	font-size: 16px;
 	letter-spacing: .5px;
 }
+.has-border-top{
+	border-bottom: 1px dotted black;
+}
 .has-border-bottom{
 	border-bottom: 1px dotted black;
 	line-height: 0.1em;
@@ -180,6 +183,12 @@ footer{
 	position: fixed;
 	width:100%;
 	z-index: 99999;
+}
+.list-group-item{
+	overflow: hidden;
+}
+.info-search{
+	text-align: center;
 }
 
 /* SIDE BAR */
