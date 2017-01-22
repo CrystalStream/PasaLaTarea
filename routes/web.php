@@ -24,7 +24,8 @@ Route::get('/final_reset' , 'Auth\ResetPasswordController@reset_success');
 
 Route::group(['prefix' => 'home'], function(){
 	Route::get('/', 'HomeController@home');
-	Route::resource('/subject', 'SubjectController');
+	Route::resource('subject', 'Frontend\SubjectsController', ['only' => ['index', 'show']]);
+	Route::resource('subject.semester', 'Frontend\SubjectSemesterController', ['only' => ['index', 'show']]);
 });
 Route::get('/search' , 'HomeController@search')->name('search');
 

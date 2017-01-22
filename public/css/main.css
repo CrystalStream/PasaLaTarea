@@ -213,7 +213,7 @@ footer{
 	position:absolute;
 	left:0;
 	right:0;
-	top:50%;
+	top:8%;
 	height:50px;
 	text-align: center;
 }
@@ -224,6 +224,21 @@ footer{
 	padding:20px;
 	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
+.all-subjects{
+	overflow: hidden;
+}
+.last-subject{
+	opacity: .4;
+}
+.more-subject{
+	position: absolute;
+	top:0;
+	left: 0;
+	color:red;
+	z-index: 10;
+	padding: 50px 100px;
+}
+
 /* SIDE BAR */
 .main .row{
 	padding: 0px;
