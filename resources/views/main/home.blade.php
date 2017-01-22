@@ -28,7 +28,7 @@
 		</div>
 	</div>
 
-	<div class="col-xs-12 has-border-bottom">
+	<div class="col-xs-12 has-border-bottom has-margin-top">
 		<div class="jumbotron">
 			{!! Form::open(array()) !!}
 				<fieldset>

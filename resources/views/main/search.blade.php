@@ -9,7 +9,7 @@
 		</div>
 	</div>
 	<div class="col-xs-12 has-margin-top">
-		<a href="#">
+		<a href="{{ url('/home/subject') }}">
 			<div class="col-xs-12 col-sm-6 col-md-4">
 				<div class="panel panel-primary">
 					<div class="panel-heading">Nombre de la materia</div>
@@ -40,7 +40,7 @@
 				</div>
 			</div>
 		</a>
-		<a href="#">
+		<a href="{{ url('/home/subject') }}">
 			<div class="col-xs-12 col-sm-6 col-md-4">
 				<div class="panel panel-primary">
 					<div class="panel-heading">Nombre de la materia</div>
@@ -71,7 +71,7 @@
 				</div>
 			</div>
 		</a>
-		<a href="#">
+		<a href="{{ url('/home/subject') }}">
 			<div class="col-xs-12 col-sm-6 col-md-4">
 				<div class="panel panel-primary">
 					<div class="panel-heading">Nombre de la materia</div>

@@ -14,14 +14,17 @@
 Route::get('/', 'MainController@index')->middleware('guest');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['admin','guest','auth']], function(){
-	Route::resource('career', 'CareerController');
-	Route::resource('semester', 'SemesterController');
-	Route::resource('subject','SubjectController');
+	Route::resource('careers', 'CareerController');
+	Route::resource('semesters', 'SemesterController');
+	Route::resource('subjects','SubjectController');
 });
 Auth::routes();
 Route::get('/logout' , 'Auth\LoginController@logout');
 Route::get('/final_reset' , 'Auth\ResetPasswordController@reset_success');
 
-Route::get('/home', 'HomeController@home');
+Route::group(['prefix' => 'home'], function(){
+	Route::get('/', 'HomeController@home');
+	Route::resource('/subject', 'SubjectController');
+});
 Route::get('/search' , 'HomeController@search')->name('search');
 
